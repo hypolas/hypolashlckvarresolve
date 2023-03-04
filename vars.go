@@ -4,11 +4,12 @@ import (
 	"github.com/hypolas/hypolaslogger"
 )
 
-func makeLogger() hypolaslogger.HypolasLogger {
-	l := hypolaslogger.NewLogger("test/log.txt")
+func makeLogger(logPath string) hypolaslogger.HypolasLogger {
+	l := hypolaslogger.NewLogger(logPath)
 	return l
 }
 
 var (
-	logf = makeLogger()
+	testPath = "test/log.txt"
+	logf     = makeLogger(testPath)
 )
