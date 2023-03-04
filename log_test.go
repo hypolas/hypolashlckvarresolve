@@ -16,12 +16,13 @@ var (
 
 // TestResolve test different strings format
 func TestResolve(t *testing.T) {
-	logf = makeLogger(testPath)
+	os.Setenv("HYPOLAS_LOGS_FILE", "test/logs.log")
+	logf = makeLogger("")
 	for _, str := range stringList {
 		ResolveVariable(str)
 	}
 
-	readFile, err := os.Open(testPath)
+	readFile, err := os.Open(logf.LogFile.Name())
 
 	if err != nil {
 		panic(err)
