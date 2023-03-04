@@ -25,7 +25,7 @@ func TestResolve(t *testing.T) {
 		ResolveVariable(str)
 	}
 
-	readFile, err := os.Open(logPath)
+	readFile, err := os.Open(testPath)
 
 	if err != nil {
 		fmt.Println(err)
