@@ -1,9 +1,9 @@
 package hypolashlckvarresolve
 
 import (
-	// "bufio"
-	// "fmt"
-	// "os"
+	"bufio"
+	"fmt"
+	"os"
 	"testing"
 )
 
@@ -21,19 +21,19 @@ func TestResolve(t *testing.T) {
 		ResolveVariable(str)
 	}
 
-	// readFile, err := os.Open(testPath)
+	readFile, err := os.Open(testPath)
 
-	// if err != nil {
-	// 	panic(err)
-	// }
+	if err != nil {
+		panic(err)
+	}
 
-	// fileScanner := bufio.NewScanner(readFile)
+	fileScanner := bufio.NewScanner(readFile)
 
-	// fileScanner.Split(bufio.ScanLines)
+	fileScanner.Split(bufio.ScanLines)
 
-	// for fileScanner.Scan() {
-	// 	fmt.Println(fileScanner.Text())
-	// }
+	for fileScanner.Scan() {
+		fmt.Println(fileScanner.Text())
+	}
 
-	// readFile.Close()
+	readFile.Close()
 }
