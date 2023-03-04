@@ -1,4 +1,0 @@
-DEBUG: 2023/03/04 16:46:34 hypolaslogger.go:41: Name: strCommand | Type: string | Value:  ls -la  | 
-DEBUG: 2023/03/04 16:46:34 hypolaslogger.go:41: Name: stringToReplace | Type: string | Value: #CMDSTART# ls -la #CMDEND# | 
-DEBUG: 2023/03/04 16:46:34 hypolaslogger.go:41: Name: cmdArgs | Type: []string | Value: [ls -la] | 
-ERROR: 2023/03/04 16:46:34 hypolashlckvarresolve.go:48: cmd.Run() failed with exec: "ls": executable file not found in %PATH%
