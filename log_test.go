@@ -9,7 +9,7 @@ import (
 
 var (
 	stringList = []string{
-		"http://#CMDSTART# ls -la #CMDEND#:8082/ping",
+		"http://#CMDSTART# hostname #CMDEND#:8082/ping",
 		"test #CMDSTART# hostname -i #CMDEND#/blabla",
 	}
 )
