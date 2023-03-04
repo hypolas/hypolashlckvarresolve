@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 env:
-  HYPOLAS_LOGS_FILE: test/logs/log
+  HYPOLAS_LOGS_FILE: test/logs.log
 
 jobs:
   build:
