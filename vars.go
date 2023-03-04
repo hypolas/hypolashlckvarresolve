@@ -10,6 +10,6 @@ func makeLogger(logPath string) hypolaslogger.HypolasLogger {
 }
 
 var (
-	logPath = ""
-	logf    = makeLogger(logPath)
+	testPath = "test/log.txt"
+	logf     = makeLogger(testPath)
 )

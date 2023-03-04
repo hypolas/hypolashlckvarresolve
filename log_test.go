@@ -1,9 +1,9 @@
 package hypolashlckvarresolve
 
 import (
-	"bufio"
-	"fmt"
-	"os"
+	// "bufio"
+	// "fmt"
+	// "os"
 	"testing"
 )
 
@@ -14,10 +14,6 @@ var (
 	}
 )
 
-const (
-	testPath = "test/log.txt"
-)
-
 // TestResolve test different strings format
 func TestResolve(t *testing.T) {
 	logf = makeLogger(testPath)
@@ -25,18 +21,19 @@ func TestResolve(t *testing.T) {
 		ResolveVariable(str)
 	}
 
-	readFile, err := os.Open(testPath)
+	// readFile, err := os.Open(testPath)
 
-	if err != nil {
-		fmt.Println(err)
-	}
-	fileScanner := bufio.NewScanner(readFile)
+	// if err != nil {
+	// 	panic(err)
+	// }
 
-	fileScanner.Split(bufio.ScanLines)
+	// fileScanner := bufio.NewScanner(readFile)
 
-	for fileScanner.Scan() {
-		fmt.Println(fileScanner.Text())
-	}
+	// fileScanner.Split(bufio.ScanLines)
 
-	readFile.Close()
+	// for fileScanner.Scan() {
+	// 	fmt.Println(fileScanner.Text())
+	// }
+
+	// readFile.Close()
 }
