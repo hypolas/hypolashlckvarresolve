@@ -8,10 +8,7 @@ import (
 	"unicode"
 )
 
-/*
-*  ResolveVariable get output from command in string
-*  and replace output in string
- */
+// ResolveVariable get output from command in string and replace output in string
 func ResolveVariable(strVar string) string {
 	if strings.Contains(strVar, "#CMDSTART#") {
 		strVar = resolveCMD(strVar)
