@@ -9,9 +9,10 @@ import (
 )
 
 /*
-*	Format environnement variables
+*  ResolveVariable get output from command in string
+*  and replace output in string
  */
-func resolveVariable(strVar string) string {
+func ResolveVariable(strVar string) string {
 	if strings.Contains(strVar, "#CMDSTART#") {
 		strVar = resolveCMD(strVar)
 	}

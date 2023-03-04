@@ -11,9 +11,9 @@ var (
 	}
 )
 
-// Test if log is wheel write.
+// TestResolve test different strings format
 func TestResolve(t *testing.T) {
 	for _, str := range stringList {
-		resolveVariable(str)
+		ResolveVariable(str)
 	}
 }
