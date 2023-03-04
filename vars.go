@@ -2,6 +2,7 @@ package hypolashlckvarresolve
 
 import (
 	"github.com/hypolas/hypolaslogger"
+	"os"
 )
 
 func makeLogger(logPath string) hypolaslogger.HypolasLogger {
@@ -10,6 +11,5 @@ func makeLogger(logPath string) hypolaslogger.HypolasLogger {
 }
 
 var (
-	testPath = "test/log.txt"
-	logf     = makeLogger(testPath)
+	logf = makeLogger(os.Getenv("HYPOLAS_LOGS_FOLDER"))
 )
